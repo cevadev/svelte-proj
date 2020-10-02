@@ -2,6 +2,7 @@
 	import About from "./components/About.svelte";
 	import Text from "./components/Text.svelte";
 	import Person from "./components/Person.svelte"
+	import Skill from './components/Skill.svelte';
 
 	export let name;
 	export let lastName;
@@ -19,6 +20,7 @@
 	<About />
 	<Text anotherText="Hello Svelte Community!!!"/>
 	<Person name={data.name} lastName={data.lastName} age={data.age}/>
+	<Skill />
 	<img src={svelteLogo} alt="Svelte logo">
 </main>
 
