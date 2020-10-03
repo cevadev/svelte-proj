@@ -1,4 +1,6 @@
 <script>
+    import Button from './Button.svelte';
+
     let someText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent felis velit, malesuada sed erat nec, vestibulum dictum dolor. Mauris eget iaculis justo. Maecenas eros dui, malesuada nec dapibus egestas, posuere ut metus. Fusce dignissim dapibus congue. Nulla lobortis, velit quis molestie condimentum, nulla tortor facilisis metus, sit amet ullamcorper risus mi vitae elit. Aenean volutpat dui urna, non efficitur neque maximus eget. Donec fringilla non libero dapibus mattis.`;
 
     //manejamos un contador
@@ -34,9 +36,19 @@
         <p>Hello dark mode</p>
     {/if}
 
-    
-    <button on:click={handleClick}>Click me! {count === 0 ? '' : count}</button>
+    <Button 
+        text="Click" 
+        count={count} 
+        on:click={handleClick}
+    />
+
+     <Button 
+        text="Dark mode" 
+        on:click={toogle}
+    />
+
+    <!-- <button on:click={handleClick}>Click me! {count === 0 ? '' : count}</button> -->
     
     <!--boton que implementa la funcionalidad dark-mode-->
-    <button on:click={toogle}>DarkMode</button>
+    <!-- <button on:click={toogle}>DarkMode</button> -->
 </div>
